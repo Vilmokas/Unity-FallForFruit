@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
         _body.AddForce(Vector3.right * _direction * _speed);
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void SetDirection(float direction)
     {
-        _direction = context.ReadValue<float>();
+        _direction = direction;
     }
 }
