@@ -9,6 +9,7 @@ public class ObjectController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<Health>().ReduceHealth(1);
             Debug.Log("hit ground");
         }
     }

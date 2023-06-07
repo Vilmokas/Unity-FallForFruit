@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
     bool _isGamePaused;
     public bool IsGamePaused { get { return _isGamePaused; } }
+    bool _isGameOver;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _isGamePaused = false;
+        _isGameOver = false;
     }
 
     public void PauseGame(bool isGamePaused)
@@ -38,5 +40,11 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+    }
+
+    public void OnGameOver()
+    {
+        _isGameOver = true;
+        Debug.Log("game over");
     }
 }
