@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     bool _isGamePaused;
     public bool IsGamePaused { get { return _isGamePaused; } }
     bool _isGameOver;
+    public bool IsGameOver { get { return _isGameOver; } }
 
     private void Awake()
     {
@@ -46,5 +48,10 @@ public class GameManager : MonoBehaviour
     {
         _isGameOver = true;
         Debug.Log("game over");
+    }
+
+    public void OnGameRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

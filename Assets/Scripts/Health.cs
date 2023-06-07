@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
         if (_currentHealth == 0)
         {
             GameManager.Instance.OnGameOver();
+            _uiManager.ChangeGameOverWindowState(true);
         }
     }
 }

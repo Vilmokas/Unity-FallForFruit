@@ -16,7 +16,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        if (!GameManager.Instance.IsGameOver)
+        {
+            Move();
+        }
     }
 
     void Move()
