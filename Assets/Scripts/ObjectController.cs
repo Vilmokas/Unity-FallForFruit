@@ -10,7 +10,7 @@ public class ObjectController : MonoBehaviour
         {
             Destroy(gameObject);
             GameObject.Find("Player").GetComponent<Health>().ReduceHealth(1);
-            Debug.Log("hit ground");
+            SoundManager.Instance.PlayObjectHitGroundSound();
         }
     }
 }

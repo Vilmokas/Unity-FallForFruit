@@ -7,6 +7,11 @@ public class SoundManager : MonoBehaviour
     static SoundManager _instance;
     public static SoundManager Instance { get { return _instance; } }
 
+    [SerializeField] AudioClip _catchSound;
+    [SerializeField] AudioClip _objectSpawnSound;
+    [SerializeField] AudioClip _objectHitGroundSound;
+    AudioSource _audioSource;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -18,10 +23,6 @@ public class SoundManager : MonoBehaviour
             _instance = this;
         }
     }
-
-    [SerializeField] AudioClip _catchSound;
-    [SerializeField] AudioClip _objectSpawnSound;
-    AudioSource _audioSource;
 
     private void Start()
     {
@@ -36,5 +37,10 @@ public class SoundManager : MonoBehaviour
     public void PlayObjectSpawnSound()
     {
         _audioSource.PlayOneShot(_objectSpawnSound, 0.4f);
+    }
+
+    public void PlayObjectHitGroundSound()
+    {
+        _audioSource.PlayOneShot(_objectHitGroundSound, 0.3f);
     }
 }
