@@ -44,19 +44,16 @@ public class Counter : MonoBehaviour
 
     void DepositObjects()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        _storedCount += _currentCount;
+        _storedCountText.text = _storedCount.ToString();
+        _currentCount = 0;
+        _currentCountText.text = _currentCount.ToString();
+
+        foreach (GameObject caughtObject in _caughtObjects)
         {
-            _storedCount += _currentCount;
-            _storedCountText.text = _storedCount.ToString();
-            _currentCount = 0;
-            _currentCountText.text = _currentCount.ToString();
-
-            foreach (GameObject caughtObject in _caughtObjects)
-            {
-                Destroy(caughtObject);
-            }
-
-            _caughtObjects.Clear();
+            Destroy(caughtObject);
         }
+
+        _caughtObjects.Clear();
     }
 }
