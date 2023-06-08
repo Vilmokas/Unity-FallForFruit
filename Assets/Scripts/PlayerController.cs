@@ -33,5 +33,6 @@ public class PlayerController : MonoBehaviour
     public void SetDirection(float direction)
     {
         _direction = direction;
+        SoundManager.Instance.PlayWalkSound();
     }
 }

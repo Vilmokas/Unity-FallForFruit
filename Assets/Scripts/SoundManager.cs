@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip _objectSpawnSound;
     [SerializeField] AudioClip _objectHitGroundSound;
     [SerializeField] AudioClip _objectDepositSound;
+    [SerializeField] AudioClip _walkSound;
     AudioSource _audioSource;
 
     private void Awake()
@@ -48,5 +49,10 @@ public class SoundManager : MonoBehaviour
     public void PlayObjectDepositSound()
     {
         _audioSource.PlayOneShot(_objectDepositSound, 0.4f);
+    }
+
+    public void PlayWalkSound()
+    {
+        _audioSource.PlayOneShot(_walkSound, 0.7f);
     }
 }
