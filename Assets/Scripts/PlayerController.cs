@@ -6,12 +6,14 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _speed;
+    AnimationManager _animationManager;
     Rigidbody _body;
     float _direction;
 
     private void Start()
     {
         _body = GetComponent<Rigidbody>();
+        _animationManager = GetComponent<AnimationManager>();
     }
 
     private void Update()
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         _body.AddForce(Vector3.right * _direction * _speed);
+        _animationManager.PlayWalkAnimation(_direction);
     }
 
     public void SetDirection(float direction)
