@@ -56,5 +56,6 @@ public class Counter : MonoBehaviour
         }
 
         _caughtObjects.Clear();
+        SoundManager.Instance.PlayObjectDepositSound();
     }
 }
