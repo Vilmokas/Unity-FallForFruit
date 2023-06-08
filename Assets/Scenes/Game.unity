@@ -2799,7 +2799,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648811350}
-  m_LocalRotation: {x: -0.09853762, y: -0.0000000042806607, z: -4.2386888e-10, w: 0.99513334}
+  m_LocalRotation: {x: -0.098537624, y: 0.000000004280661, z: 4.2386897e-10, w: 0.99513334}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3334,7 +3334,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836775948}
-  m_LocalRotation: {x: -0.09853762, y: -0.0000000042806607, z: -4.2386888e-10, w: 0.99513334}
+  m_LocalRotation: {x: -0.098537624, y: 0.000000004280661, z: 4.2386897e-10, w: 0.99513334}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3470,7 +3470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _catchSound: {fileID: 8300000, guid: c94e7e3703a76754c903afe440d99ac2, type: 3}
   _objectSpawnSound: {fileID: 8300000, guid: fb41515088093714c8a1f11dd0f7c069, type: 3}
-  _objectHitGroundSound: {fileID: 8300000, guid: f181fec1b20781f47bd762047c001537, type: 3}
+  _objectHitGroundSound: {fileID: 8300000, guid: 8e8218f6a01e74bd5894788e3f912635, type: 3}
   _objectDepositSound: {fileID: 8300000, guid: 0df92e5523a40bb4b88935b861d9141f, type: 3}
 --- !u!4 &1839446371
 Transform:

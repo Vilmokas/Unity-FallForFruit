@@ -42,7 +42,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayObjectHitGroundSound()
     {
-        _audioSource.PlayOneShot(_objectHitGroundSound, 0.3f);
+        _audioSource.PlayOneShot(_objectHitGroundSound, 0.5f);
     }
 
     public void PlayObjectDepositSound()
