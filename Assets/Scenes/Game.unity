@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9aa8ed67591432941bb76f12eb23ff91, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2388,10 +2388,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785767619}
     m_Modifications:
-    - target: {fileID: 3557563184612166760, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 023d18327b596244c9caba2ad619f7ef, type: 2}
+    - target: {fileID: 1029517363274701943, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029517363274701943, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3557563185278236761, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
       propertyPath: m_Name
       value: Box
