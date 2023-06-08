@@ -27,11 +27,12 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         _body.AddForce(Vector3.right * _direction * _speed);
-        _animationManager.PlayWalkAnimation(_direction);
+        _animationManager.PlayWalkAnimation(_direction, _body.velocity.magnitude);
     }
 
     public void SetDirection(float direction)
     {
         _direction = direction;
+        SoundManager.Instance.PlayWalkSound();
     }
 }

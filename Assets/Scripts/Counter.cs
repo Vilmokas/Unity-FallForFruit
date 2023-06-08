@@ -40,20 +40,25 @@ public class Counter : MonoBehaviour
         _currentCount += 1;
         _currentCountText.text = _currentCount.ToString();
         _caughtObjects.Add(caughtObject);
+        SoundManager.Instance.PlayCatchSound();
     }
 
     void DepositObjects()
     {
-        _storedCount += _currentCount;
-        _storedCountText.text = _storedCount.ToString();
-        _currentCount = 0;
-        _currentCountText.text = _currentCount.ToString();
-
-        foreach (GameObject caughtObject in _caughtObjects)
+        if (_currentCount > 0)
         {
-            Destroy(caughtObject);
-        }
+            _storedCount += _currentCount;
+            _storedCountText.text = _storedCount.ToString();
+            _currentCount = 0;
+            _currentCountText.text = _currentCount.ToString();
 
-        _caughtObjects.Clear();
+            foreach (GameObject caughtObject in _caughtObjects)
+            {
+                Destroy(caughtObject);
+            }
+
+            _caughtObjects.Clear();
+            SoundManager.Instance.PlayObjectDepositSound();
+        }
     }
 }
