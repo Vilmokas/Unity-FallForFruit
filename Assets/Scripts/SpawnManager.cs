@@ -21,6 +21,7 @@ public class SpawnManager : MonoBehaviour
             var randomObjectIndex = Random.Range(0, _objectPrefabs.Count);
             var randomPositionIndex = Random.Range(0, _spawnPositions.Count);
             Instantiate(_objectPrefabs[randomObjectIndex], _spawnPositions[randomPositionIndex].position, _objectPrefabs[randomObjectIndex].transform.rotation);
+            SoundManager.Instance.PlayObjectSpawnSound();
         }
     }
 }
