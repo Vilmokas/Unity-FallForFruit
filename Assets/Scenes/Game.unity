@@ -903,7 +903,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectPrefabs:
-  - {fileID: 599649283839996616, guid: 13c50057ef3cc334b9fec67bbe0d26b1, type: 3}
+  - {fileID: 2514545742028153006, guid: 002bbeb816f57f94b91226edb2fc2a57, type: 3}
+  - {fileID: 2510842358098429588, guid: e13a7d3b7d011f84a8358fdd784c6013, type: 3}
+  - {fileID: 1157929643434673117, guid: 0cd8dab9b19c417489e6be12dd4d3fbe, type: 3}
+  - {fileID: 5631511445500738373, guid: 695c0a708b06e9740a6d35b0dffccbdf, type: 3}
+  - {fileID: 8391209258501178106, guid: 0647e65c3741dfb4dbf0d5acaef039cd, type: 3}
   _spawnDelay: 2
   _spawnPositions:
   - {fileID: 1187018418}
