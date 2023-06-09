@@ -396,6 +396,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.45, z: 0.051465627}
   m_Center: {x: 0.000000024444455, y: -0.0000000038517967, z: 0.20581427}
+--- !u!1 &2412549647835945309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8165213448813004108}
+  m_Layer: 0
+  m_Name: Cought Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8165213448813004108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412549647835945309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3557563185278236766}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3557563185278236761
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +457,7 @@ Transform:
   m_Children:
   - {fileID: 315763803937211241}
   - {fileID: 1029517363274701943}
+  - {fileID: 8165213448813004108}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -445,6 +476,7 @@ MonoBehaviour:
   _currentCountText: {fileID: 0}
   _storedCountText: {fileID: 0}
   _caughtObjects: []
+  _caughtObjectsParent: {fileID: 2412549647835945309}
 --- !u!65 &3557563185278236764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -456,8 +488,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.449462, y: 2.9902797, z: 3.5861573}
-  m_Center: {x: 0.03803426, y: 1.5991166, z: 0.030313253}
+  m_Size: {x: 6.3718414, y: 3.639005, z: 4.9382896}
+  m_Center: {x: -1.4231542, y: 1.9234793, z: -0.024861401}
 --- !u!1 &6116489254164581860
 GameObject:
   m_ObjectHideFlags: 0

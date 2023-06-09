@@ -10,6 +10,7 @@ public class Counter : MonoBehaviour
     [SerializeField] TextMeshProUGUI _currentCountText;
     [SerializeField] TextMeshProUGUI _storedCountText;
     [SerializeField] List<GameObject> _caughtObjects;
+    [SerializeField] GameObject _caughtObjectsParent;
     int _currentCount;
     int _storedCount;
 
@@ -40,6 +41,7 @@ public class Counter : MonoBehaviour
         _currentCount += 1;
         _currentCountText.text = _currentCount.ToString();
         _caughtObjects.Add(caughtObject);
+        caughtObject.transform.SetParent(_caughtObjectsParent.transform, true);
         SoundManager.Instance.PlayCatchSound();
     }
 

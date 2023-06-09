@@ -2521,30 +2521,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
-    - target: {fileID: 3557563185278236764, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Size.x
-      value: 6.3718414
-      objectReference: {fileID: 0}
-    - target: {fileID: 3557563185278236764, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Size.y
-      value: 3.639005
-      objectReference: {fileID: 0}
-    - target: {fileID: 3557563185278236764, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Size.z
-      value: 4.9382896
-      objectReference: {fileID: 0}
-    - target: {fileID: 3557563185278236764, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Center.x
-      value: -1.4231542
-      objectReference: {fileID: 0}
-    - target: {fileID: 3557563185278236764, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Center.y
-      value: 1.9234793
-      objectReference: {fileID: 0}
-    - target: {fileID: 3557563185278236764, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
-      propertyPath: m_Center.z
-      value: -0.024861401
-      objectReference: {fileID: 0}
     - target: {fileID: 3557563185278236766, guid: d0c2e5b721c734d4ab7c52a0cf67411a, type: 3}
       propertyPath: m_RootOrder
       value: 1
