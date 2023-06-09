@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] List<GameObject> _objectPrefabs;
     [SerializeField] float _spawnDelay;
     [SerializeField] List<Transform> _spawnPositions;
+    [SerializeField] List<ParticleSystem> _spawnParticles;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class SpawnManager : MonoBehaviour
             var fallObject = Instantiate(_objectPrefabs[randomObjectIndex], _spawnPositions[randomPositionIndex].position, _objectPrefabs[randomObjectIndex].transform.rotation);
             SoundManager.Instance.PlayObjectSpawnSound();
             UIManager.Instance.ShowObjectIndicator(fallObject);
+            _spawnParticles[randomPositionIndex].Play();
         }
     }
 }
