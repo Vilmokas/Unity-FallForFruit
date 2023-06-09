@@ -20,8 +20,9 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(_spawnDelay);
             var randomObjectIndex = Random.Range(0, _objectPrefabs.Count);
             var randomPositionIndex = Random.Range(0, _spawnPositions.Count);
-            Instantiate(_objectPrefabs[randomObjectIndex], _spawnPositions[randomPositionIndex].position, _objectPrefabs[randomObjectIndex].transform.rotation);
+            var fallObject = Instantiate(_objectPrefabs[randomObjectIndex], _spawnPositions[randomPositionIndex].position, _objectPrefabs[randomObjectIndex].transform.rotation);
             SoundManager.Instance.PlayObjectSpawnSound();
+            UIManager.Instance.ShowObjectIndicator(fallObject);
         }
     }
 }

@@ -2186,6 +2186,8 @@ MonoBehaviour:
   _pauseWindow: {fileID: 2086131816}
   _gameOverWindow: {fileID: 1511467941}
   _healthText: {fileID: 1571181459}
+  _objectPositionIndicator: {fileID: 6429246560457224904, guid: efe54bd9d621ae74ea9029e328e16faf, type: 3}
+  _objectPosIndicatorLifetime: 1
 --- !u!1001 &1363136816
 PrefabInstance:
   m_ObjectHideFlags: 0
