@@ -26,6 +26,7 @@ public class Counter : MonoBehaviour
         if (other.CompareTag("Object"))
         {
             CatchObject(other.gameObject);
+            other.GetComponent<ObjectController>().StopTrailParticle();
         }
     }
 
