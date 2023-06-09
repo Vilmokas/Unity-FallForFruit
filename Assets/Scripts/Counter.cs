@@ -34,7 +34,7 @@ public class Counter : MonoBehaviour
     {
         if (other.CompareTag("Deposit"))
         {
-            DepositObjects();
+            DepositObjects(other.GetComponent<DepositBox>());
         }
     }
 
@@ -48,7 +48,7 @@ public class Counter : MonoBehaviour
         _catchParticle.Play();
     }
 
-    void DepositObjects()
+    void DepositObjects(DepositBox depositBox)
     {
         if (_currentCount > 0)
         {
@@ -64,6 +64,7 @@ public class Counter : MonoBehaviour
 
             _caughtObjects.Clear();
             SoundManager.Instance.PlayObjectDepositSound();
+            depositBox.PlayDepositParticle();
         }
     }
 }
