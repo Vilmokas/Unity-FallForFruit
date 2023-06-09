@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _speed;
+    [SerializeField] ParticleSystem _walkParticle;
     AnimationManager _animationManager;
     Rigidbody _body;
     float _direction;
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
         if (!GameManager.Instance.IsGameOver)
         {
             Move();
+            if (_direction == 0 && _walkParticle.isPlaying)
+            {
+                _walkParticle.Stop();
+            }
         }
     }
 
@@ -34,5 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         _direction = direction;
         SoundManager.Instance.PlayWalkSound();
+        _walkParticle.Play();
     }
 }
