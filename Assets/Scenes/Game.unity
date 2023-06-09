@@ -1364,7 +1364,7 @@ MonoBehaviour:
   - {fileID: 1157929643434673117, guid: 0cd8dab9b19c417489e6be12dd4d3fbe, type: 3}
   - {fileID: 5631511445500738373, guid: 695c0a708b06e9740a6d35b0dffccbdf, type: 3}
   - {fileID: 8391209258501178106, guid: 0647e65c3741dfb4dbf0d5acaef039cd, type: 3}
-  _spawnDelay: 3
+  _spawnDelay: 2
   _spawnPositions:
   - {fileID: 1187018418}
   - {fileID: 123369843}
