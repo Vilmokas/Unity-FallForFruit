@@ -19,13 +19,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.Instance.IsGameOver)
+        if (!GameManager.Instance.IsGameOver && !GameManager.Instance.IsGamePaused)
         {
             Move();
-            if (_direction == 0 && _walkParticle.isPlaying)
-            {
-                _walkParticle.Stop();
-            }
         }
     }
 
@@ -38,7 +34,14 @@ public class PlayerController : MonoBehaviour
     public void SetDirection(float direction)
     {
         _direction = direction;
-        SoundManager.Instance.PlayWalkSound();
-        _walkParticle.Play();
+        if (!GameManager.Instance.IsGameOver && !GameManager.Instance.IsGamePaused)
+        {
+            SoundManager.Instance.PlayWalkSound();
+            _walkParticle.Play();
+            if (_direction == 0 && _walkParticle.isPlaying)
+            {
+                _walkParticle.Stop();
+            }
+        }
     }
 }

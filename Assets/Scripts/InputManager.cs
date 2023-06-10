@@ -23,7 +23,10 @@ public class InputManager : MonoBehaviour
 
     public void OnPause(InputAction.CallbackContext context)
     {
-        _gameManager.PauseGame(!_gameManager.IsGamePaused);
-        _UIManager.ChangePauseWindowState(!_gameManager.IsGamePaused);
+        if (context.performed)
+        {
+            _gameManager.PauseGame(!_gameManager.IsGamePaused);
+            _UIManager.ChangePauseWindowState(_gameManager.IsGamePaused);
+        }
     }
 }
