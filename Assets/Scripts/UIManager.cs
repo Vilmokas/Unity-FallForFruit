@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] GameObject _pauseWindow;
     [SerializeField] GameObject _gameOverWindow;
-    [SerializeField] TextMeshProUGUI _healthText;
+    [SerializeField] List<GameObject> _heartIcons;
     [SerializeField] GameObject _objectPositionIndicator;
     [SerializeField] float _objectPosIndicatorLifetime;
     GameObject _canvas;
@@ -57,9 +57,16 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ChangeHealthText(int health)
+    public void ChangeHealth(int health)
     {
-        _healthText.text = health.ToString();
+        foreach (var icon in _heartIcons)
+        {
+            icon.SetActive(true);
+        }
+        for (var i = _heartIcons.Count - health; i > 0; i--)
+        {
+            _heartIcons[i - 1].SetActive(false);
+        }
     }
 
     public void ChangeGameOverWindowState(bool isGameOver)
