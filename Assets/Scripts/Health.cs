@@ -10,13 +10,13 @@ public class Health : MonoBehaviour
     private void Start()
     {
         _uiManager = GameObject.Find("UI Manager").GetComponent<UIManager>();
-        _uiManager.ChangeHealthText(_currentHealth);
+        _uiManager.ChangeHealth(_currentHealth);
     }
 
     public void ReduceHealth(int reduceAmount)
     {
         _currentHealth = Mathf.Clamp(_currentHealth - reduceAmount, 0, _currentHealth);
-        _uiManager.ChangeHealthText(_currentHealth);
+        _uiManager.ChangeHealth(_currentHealth);
 
         if (_currentHealth == 0)
         {
