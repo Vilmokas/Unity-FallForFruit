@@ -12,11 +12,13 @@ public class Counter : MonoBehaviour
     [SerializeField] List<GameObject> _caughtObjects;
     [SerializeField] GameObject _caughtObjectsParent;
     [SerializeField] ParticleSystem _catchParticle;
+    PlayerController _playerController;
     int _currentCount;
     int _storedCount;
 
     private void Start()
     {
+        _playerController = GameObject.Find("Player").GetComponent<PlayerController>();
         _currentCount = 0;
         _storedCount = 0;
     }
@@ -46,6 +48,7 @@ public class Counter : MonoBehaviour
         caughtObject.transform.SetParent(_caughtObjectsParent.transform, true);
         SoundManager.Instance.PlayCatchSound();
         _catchParticle.Play();
+        _playerController.ChangeSpeedModifier(_currentCount);
     }
 
     void DepositObjects(DepositBox depositBox)
@@ -56,6 +59,7 @@ public class Counter : MonoBehaviour
             _storedCountText.text = _storedCount.ToString();
             _currentCount = 0;
             _currentCountText.text = _currentCount.ToString();
+            _playerController.ChangeSpeedModifier(_currentCount);
 
             foreach (GameObject caughtObject in _caughtObjects)
             {
