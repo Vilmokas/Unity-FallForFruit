@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(RoundCounter());
         StartCoroutine(SpawnObject());
     }
 
@@ -26,5 +27,18 @@ public class SpawnManager : MonoBehaviour
             UIManager.Instance.ShowObjectIndicator(fallObject);
             _spawnParticles[randomPositionIndex].Play();
         }
+    }
+
+    IEnumerator RoundCounter()
+    {
+        var increment = _spawnDelay / 3;
+        for (var i = 3; i > 0; i--)
+        {
+            UIManager.Instance.ChangeCountdownText(i.ToString());
+            yield return new WaitForSeconds(increment);
+        }
+        UIManager.Instance.ChangeCountdownText("Start!");
+        yield return new WaitForSeconds(0.3f);
+        UIManager.Instance.ChangeCountdownText("hide");
     }
 }

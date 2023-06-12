@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         var speed = _speed - (_speedModifier / 10f);
-        Debug.Log("speed with modifier: " + speed);
         transform.Translate(Vector3.right * _direction * speed * Time.deltaTime);
         _animationManager.PlayWalkAnimation(_direction, _body.velocity.magnitude);
     }

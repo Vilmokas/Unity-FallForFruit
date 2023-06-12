@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> _heartIcons;
     [SerializeField] GameObject _objectPositionIndicator;
     [SerializeField] float _objectPosIndicatorLifetime;
+    [SerializeField] TextMeshProUGUI _countdownText;
     GameObject _canvas;
 
     private void Awake()
@@ -79,6 +81,15 @@ public class UIManager : MonoBehaviour
         {
             _gameOverWindow.SetActive(false);
         }
+    }
+
+    public void ChangeCountdownText(string text)
+    {
+        if (text == "hide")
+        {
+            _countdownText.gameObject.SetActive(false);
+        }
+        _countdownText.text = text;
     }
 
     public void RestartGame()
