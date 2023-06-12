@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour
     AnimationManager _animationManager;
     Rigidbody _body;
     float _direction;
+    int _speedModifier;
 
     private void Start()
     {
+        _speedModifier = 0;
         _body = GetComponent<Rigidbody>();
         _animationManager = GetComponent<AnimationManager>();
     }
@@ -27,8 +29,15 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(Vector3.right * _direction * _speed * Time.deltaTime);
+        var speed = _speed - (_speedModifier / 10f);
+        Debug.Log("speed with modifier: " + speed);
+        transform.Translate(Vector3.right * _direction * speed * Time.deltaTime);
         _animationManager.PlayWalkAnimation(_direction, _body.velocity.magnitude);
+    }
+
+    public void ChangeSpeedModifier(int modifier)
+    {
+        _speedModifier = modifier;
     }
 
     public void SetDirection(float direction)
