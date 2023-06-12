@@ -19,4 +19,9 @@ public class SceneController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OnDifficultyScene()
+    {
+        SceneManager.LoadScene("Difficulty");
+    }
 }
