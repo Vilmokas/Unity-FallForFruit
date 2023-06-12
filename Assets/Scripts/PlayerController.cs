@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        _body.AddForce(Vector3.right * _direction * _speed);
+        transform.Translate(Vector3.right * _direction * _speed * Time.deltaTime);
         _animationManager.PlayWalkAnimation(_direction, _body.velocity.magnitude);
     }
 

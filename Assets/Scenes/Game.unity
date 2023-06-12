@@ -5832,6 +5832,14 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5342340008816338964, guid: 32d25bc8bea2f8c41841c60bcf1e4703, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342340008816338964, guid: 32d25bc8bea2f8c41841c60bcf1e4703, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5342340008816338965, guid: 32d25bc8bea2f8c41841c60bcf1e4703, type: 3}
       propertyPath: m_Size.x
       value: 0.5
@@ -5842,7 +5850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5342340008816338967, guid: 32d25bc8bea2f8c41841c60bcf1e4703, type: 3}
       propertyPath: _speed
-      value: 180
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5342340008816338967, guid: 32d25bc8bea2f8c41841c60bcf1e4703, type: 3}
       propertyPath: _walkParticle
