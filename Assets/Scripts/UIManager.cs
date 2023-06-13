@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _objectPositionIndicator;
     [SerializeField] float _objectPosIndicatorLifetime;
     [SerializeField] TextMeshProUGUI _countdownText;
+    [SerializeField] TextMeshProUGUI _endGameStoredText;
+    [SerializeField] TextMeshProUGUI _endGameHeldText;
     GameObject _canvas;
 
     private void Awake()
@@ -94,5 +96,11 @@ public class UIManager : MonoBehaviour
     public void RestartGame()
     {
         GameManager.Instance.OnGameRestart();
+    }
+
+    public void ChangeEndGameScores(int storedCount, int heldCount)
+    {
+        _endGameStoredText.text = "Stored fruit: " + storedCount.ToString();
+        _endGameHeldText.text = "Held fruit: " + heldCount.ToString();
     }
 }

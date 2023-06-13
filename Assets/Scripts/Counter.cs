@@ -49,6 +49,7 @@ public class Counter : MonoBehaviour
         SoundManager.Instance.PlayCatchSound();
         _catchParticle.Play();
         _playerController.ChangeSpeedModifier(_currentCount);
+        UIManager.Instance.ChangeEndGameScores(_storedCount, _currentCount);
     }
 
     void DepositObjects(DepositBox depositBox)
@@ -69,6 +70,7 @@ public class Counter : MonoBehaviour
             _caughtObjects.Clear();
             SoundManager.Instance.PlayObjectDepositSound();
             depositBox.PlayDepositParticle();
+            UIManager.Instance.ChangeEndGameScores(_storedCount, _currentCount);
         }
     }
 }
