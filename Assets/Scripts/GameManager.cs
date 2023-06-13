@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public void OnGameOver()
     {
         _isGameOver = true;
+        SoundManager.Instance.ChangeBgMusic();
     }
 
     public void OnGameRestart()
