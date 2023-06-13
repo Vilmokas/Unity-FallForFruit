@@ -13,6 +13,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip _objectDepositSound;
     [SerializeField] AudioClip _walkSound;
     [SerializeField] AudioClip _buttonClickSound;
+    [SerializeField] AudioClip _deathBgMusic;
+    [SerializeField] AudioSource _bgMusicAudioSource;
     AudioSource _audioSource;
 
     private void Awake()
@@ -60,5 +62,11 @@ public class SoundManager : MonoBehaviour
     public void PlayButtonSound()
     {
         _audioSource.PlayOneShot(_buttonClickSound, 0.7f);
+    }
+
+    public void ChangeBgMusic()
+    {
+        _bgMusicAudioSource.clip = _deathBgMusic;
+        _bgMusicAudioSource.Play();
     }
 }
