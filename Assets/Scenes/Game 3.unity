@@ -908,6 +908,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deposit Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1598811309478112230, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598811309478112231, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
 --- !u!4 &378220517 stripped
@@ -5594,6 +5602,14 @@ PrefabInstance:
     - target: {fileID: 1598811309478112229, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
       propertyPath: m_Name
       value: Deposit Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598811309478112230, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598811309478112231, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a8054535c91b44293d97594b90ed43, type: 3}
