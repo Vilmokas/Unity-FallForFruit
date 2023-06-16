@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] float _spawnDelay;
     public float SpawnDelay { get { return _spawnDelay; } }
     [SerializeField] List<Transform> _spawnPositions;
-    [SerializeField] List<ParticleSystem> _spawnParticles;
+    [SerializeField] GameObject _spawnParticlePrefab;
     float _waitTime;
 
     private void Start()
@@ -24,11 +24,13 @@ public class SpawnManager : MonoBehaviour
         while (!GameManager.Instance.IsGameOver)
         {
             var randomObjectIndex = Random.Range(0, _objectPrefabs.Count);
-            var randomPositionIndex = Random.Range(0, _spawnPositions.Count);
-            var fallObject = Instantiate(_objectPrefabs[randomObjectIndex], _spawnPositions[randomPositionIndex].position, _objectPrefabs[randomObjectIndex].transform.rotation);
+            var randomPositionIndex = Random.Range(_spawnPositions[0].position.x, _spawnPositions[1].position.x);
+            var newPosition = _spawnPositions[0].position;
+            newPosition.x = randomPositionIndex;
+            var fallObject = Instantiate(_objectPrefabs[randomObjectIndex], newPosition, _objectPrefabs[randomObjectIndex].transform.rotation);
             SoundManager.Instance.PlayObjectSpawnSound();
             UIManager.Instance.ShowObjectIndicator(fallObject);
-            _spawnParticles[randomPositionIndex].Play();
+            Instantiate(_spawnParticlePrefab, newPosition, _spawnParticlePrefab.transform.rotation);
             yield return new WaitForSeconds(_spawnDelay);
         }
     }
