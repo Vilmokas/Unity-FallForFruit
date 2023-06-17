@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705b6b1288ef3dd4dbde1105f8bd3d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyParticle: {fileID: 546157788802091137, guid: 7558d1a82cbd258468ac48a450b58b71, type: 3}
+  _destroyParticle: {fileID: 546157788802091137, guid: f53cb38474791a8409df172da340e3ad, type: 3}
   _trailParticle: {fileID: 7032637560964690447}
 --- !u!1001 &303001107574562421
 PrefabInstance:
@@ -276,6 +276,22 @@ PrefabInstance:
     - target: {fileID: 5348796613484834028, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 47224
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.28773582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.9046575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3233e6557dace064e8318f9117e4d220, type: 3}

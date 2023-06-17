@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705b6b1288ef3dd4dbde1105f8bd3d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyParticle: {fileID: 546157788802091137, guid: 7558d1a82cbd258468ac48a450b58b71, type: 3}
+  _destroyParticle: {fileID: 546157788802091137, guid: 84731f6b55e917b4eb30a375883a290e, type: 3}
   _trailParticle: {fileID: 8460559857090966050}
 --- !u!1001 &4963953371402210963
 PrefabInstance:
@@ -214,6 +214,38 @@ PrefabInstance:
     - target: {fileID: 5348796613484834028, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 47417
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.23113209
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.41024336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130254495766552728, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_NumColorKeys
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3233e6557dace064e8318f9117e4d220, type: 3}
